@@ -4,7 +4,7 @@ import Todo from "./Todo";
 function TodoList({ todos, setTodos }) {
   return (
     <div>
-      <ul class="list-group">
+      <ul className="list-group">
         {todos.map((item) => (
           <Todo
             key={item.id}

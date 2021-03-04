@@ -1,3 +1,4 @@
+import { Checkbox, Stack } from "@fluentui/react";
 import React from "react";
 
 function Todo({ description, todos, todo, setTodos }) {
@@ -14,13 +15,15 @@ function Todo({ description, todos, todo, setTodos }) {
   return (
     <>
       <li className={`list-items ${todo.done ? "completed" : ""}`}>
-        <input
-          className="form-check-input"
-          type="checkbox"
-          onChange={handleDone}
-          id="flexCheckDefault"
-        />
-        {description}
+        <Stack>
+          <Checkbox
+            className="form-check-input"
+            type="checkbox"
+            onChange={handleDone}
+            id="flexCheckDefault"
+          />
+        </Stack>
+        <span>{description}</span>
       </li>
     </>
   );

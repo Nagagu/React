@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TodoAdd from "./TodoAdd";
 import TodoList from "./TodoList";
+import { PrimaryButton } from "@fluentui/react";
 
 function Form() {
   const [showTodoDiv, setShowAddTodoDiv] = useState(false);
@@ -15,9 +16,7 @@ function Form() {
     <>
       <h1>Todo App</h1>
       <hr />
-      <button onClick={handleShowAddTodo} className="btn btn-primary">
-        + Añadir
-      </button>
+      <PrimaryButton onClick={handleShowAddTodo}>+ Añadir</PrimaryButton>
       {showTodoDiv ? <TodoAdd todos={todos} setTodos={setTodos} /> : null}
 
       <TodoList todos={todos} setTodos={setTodos} />
