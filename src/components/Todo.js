@@ -1,14 +1,23 @@
 import React from "react";
 
-function Todo({ description }) {
-  const handleDone = () => {};
+function Todo({ description, todos, todo, setTodos }) {
+  const handleDone = () => {
+    setTodos(
+      todos.map((item) => {
+        if (item.id === todo.id) {
+          return { ...item, done: !item.done };
+        }
+        return item;
+      })
+    );
+  };
   return (
     <>
-      <li class="list-group-item">
+      <li className={`list-items ${todo.done ? "completed" : ""}`}>
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
-          value=""
+          onChange={handleDone}
           id="flexCheckDefault"
         />
         {description}
