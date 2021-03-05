@@ -27,7 +27,7 @@ function TodoAdd({ todos, setTodos }) {
     <div class="input-group mb-3">
       <TextField
         class="form-goup"
-        placeholder="add a todo"
+        placeholder="añadir todo"
         value={inputText}
         onChange={handleInputChange}
         type="text"
@@ -38,7 +38,7 @@ function TodoAdd({ todos, setTodos }) {
         id="button-addon2"
         onClick={handleAddTodo}
       >
-        Add Todo
+        Añadir Todo
       </PrimaryButton>
     </div>
   );
