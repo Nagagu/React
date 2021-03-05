@@ -3,7 +3,7 @@ import Todo from "./Todo";
 
 function TodoList({ todos, setTodos }) {
   return (
-    <div>
+    <div className="todoList">
       <ul className="list-group">
         {todos.map((item) => (
           <Todo
@@ -11,7 +11,6 @@ function TodoList({ todos, setTodos }) {
             description={item.description}
             done={item.done}
             todo={item}
-            todos={todos}
             setTodos={setTodos}
           />
         ))}

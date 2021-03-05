@@ -1,3 +1,4 @@
+import { TextField, PrimaryButton } from "@fluentui/react";
 import React, { useState } from "react";
 
 function TodoAdd({ todos, setTodos }) {
@@ -24,21 +25,21 @@ function TodoAdd({ todos, setTodos }) {
 
   return (
     <div class="input-group mb-3">
-      <input
+      <TextField
         class="form-goup"
         placeholder="add a todo"
         value={inputText}
         onChange={handleInputChange}
         type="text"
       />
-      <button
+      <PrimaryButton
         class="btn btn-outline-primary"
         type="button"
         id="button-addon2"
         onClick={handleAddTodo}
       >
         Add Todo
-      </button>
+      </PrimaryButton>
     </div>
   );
 }
