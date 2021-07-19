@@ -37,22 +37,22 @@ function Form() {
         <>
           <TodoAdd todos={todos} setTodos={setTodos} />
           <DefaultButton onClick={handleShowAddTodo} className="cancelButton">
-            Cancelar
+            Cancel
           </DefaultButton>
         </>
       ) : (
-        <PrimaryButton onClick={handleShowAddTodo}>+ Añadir</PrimaryButton>
+        <PrimaryButton onClick={handleShowAddTodo}>+ Add New</PrimaryButton>
       )}
 
       <TodoList
         todos={
-          showAllTodos ? todos : todos.filter((item) => item.done == false)
+          showAllTodos ? todos : todos.filter((item) => item.done === false)
         }
         setTodos={setTodos}
       />
-      <DefaultButton onClick={handleShowAllTodos}>Mostrar todas</DefaultButton>
+      <DefaultButton onClick={handleShowAllTodos}>Show All</DefaultButton>
       <DefaultButton onClick={handleShowUndoneTodos}>
-        Tareas pendientes
+        Pending Tasks
       </DefaultButton>
     </>
   );

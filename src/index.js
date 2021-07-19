@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Form from "./components/Form";
-import TodoForm from "./components/TodoForm";
 import "./index.css";
 
 ReactDOM.render(<Form />, document.getElementById("root"));
